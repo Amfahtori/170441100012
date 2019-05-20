@@ -492,13 +492,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#memilih-kolom-uji-untuk-dihitung-hasilnya" title="Memilih kolom uji untuk dihitung hasilnya" class="md-nav__link">
-    Memilih kolom uji untuk dihitung hasilnya
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#memasukkan-data-dan-split-data" title="Memasukkan data dan split data" class="md-nav__link">
     Memasukkan data dan split data
   </a>
@@ -640,13 +633,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#memilih-kolom-uji-untuk-dihitung-hasilnya" title="Memilih kolom uji untuk dihitung hasilnya" class="md-nav__link">
-    Memilih kolom uji untuk dihitung hasilnya
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#memasukkan-data-dan-split-data" title="Memasukkan data dan split data" class="md-nav__link">
     Memasukkan data dan split data
   </a>
@@ -739,15 +725,6 @@ data.info()</code></pre>
 <p>Hasil outputnya sebagai berikut :</p>
 <p><img alt="" src="../../assets/images/dt_head.png" /></p>
 <p><img alt="" src="../../assets/images/dt_info.png" /></p>
-<h3 id="memilih-kolom-uji-untuk-dihitung-hasilnya">Memilih kolom uji untuk dihitung hasilnya<a class="headerlink" href="#memilih-kolom-uji-untuk-dihitung-hasilnya" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-python">zero_not_accepted = ['age','sex','cp','trestbps','chol','fbs','restecg','thalach',
-                     'exang','oldpeak','slope','ca','thal']
-
-for col in zero_not_accepted:
-    data[col]= data[col].replace(0,np.NaN)
-    mean = int(data[col].mean(skipna=True))
-    data[col] = data[col].replace(np.NaN,mean)</code></pre>
-
 <h3 id="memasukkan-data-dan-split-data">Memasukkan data dan split data<a class="headerlink" href="#memasukkan-data-dan-split-data" title="Permanent link">&para;</a></h3>
 <p>Dalam pemasukan data sebelumnya data dibagi menjadi dua yaitu x yang diunakan sebagai atribut dan y yang digunakan sebagai class. Dalam melakukan split disana terdapat test_size=0.3 adalah ukuran dari data test adalah 30% dan terdapat random_state disana adalah untuk random berapa kali data diacak jika angka yang dimasukkan berbeda maka data yang akan didapatkan juga berbeda.</p>
 <pre class="codehilite"><code class="language-python">X = data[['age','sex','cp','trestbps','chol','fbs','restecg','thalach',
